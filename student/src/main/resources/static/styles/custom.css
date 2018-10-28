@@ -1,0 +1,66 @@
+body {
+	background-image: url(background.png);
+	font-family: Tahoma, Sans;
+}
+
+a, a:hover, a:active, a:visited {
+	opacity: 0.9;
+	text-decoration: none;
+}
+
+.label {
+	font-size: 90%;
+	font-weight: normal;
+	margin-top: 14px;
+	padding: 8px 12px;
+	vertical-align: bottom;
+}
+
+.form-control {
+	height: 45px;
+}
+
+.btn-default {
+	background-color: #e9b96e;
+}
+
+.btn-default:hover {
+	color: #fff;
+	background-color: #c17d11;
+}
+
+.well {
+	border-radius: 6px;
+	border-bottom: 1px solid gray;
+	box-shadow: 1px 1px 4px #333;
+	opacity: 0.8;
+}
+
+.footer-bar {
+	font-size: 110%;
+	font-weight: bold;
+	margin: 4px auto;
+	padding: 10px 8px;
+	text-align: center;
+	border-radius: 6px;
+	border-top: 1px solid gray;
+	box-shadow: 1px -1px 4px #333;
+	background-color: #f5f5f5;
+	opacity: 0.8;
+}
+
+.view-area {
+	background: #f5f5f5;
+	border-radius: 6px;
+	box-shadow: 1px 1px 4px #333;
+	min-height: 240px;
+	margin: 16px auto;
+	padding: 10px;
+}
+
+.view-area h3, hr {
+    text-align: center;
+    margin: 0px;
+}
+
+row.view-area h3 {}

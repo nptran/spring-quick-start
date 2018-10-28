@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/header :: common-header">
+	</head>
+	<body>
+	    <div th:replace="fragments/header :: header"></div>
+        <div class="container">
+            <span class="" th:if="${#lists.isEmpty(students)}" style = "color: red; font-size: 20px">
+                <script type="text/javascript">
+	                window.onload = function() {
+	                    if(confirm("Chưa có sinh viên nào! Thêm mới?")) {
+	                    	window.location="http://localhost:8080/add";
+	                    }
+	                };
+				</script>
+            </span>
+            <div class="row view-area" th:if="${students}">
+            	<h3>Danh sách sinh viên</h3><hr>
+            	<table class="table table-striped">
+					  <thead>
+					    <tr>
+					      <th scope="col">Tên</th>
+					      <th scope="col">Lớp</th>
+					      <th scope="col">Tuổi</th>
+					    </tr>
+					  </thead>
+               		  <ul th:each="std : ${students}">
+					  <tbody>
+					    <tr>
+					      <td th:text="${std.getName()}"></td>
+					      <td th:text="${std.getGroup()}"></td>
+					      <td th:text="${std.getAge()}"></td>
+					    </tr>
+					  </tbody>
+					</table>
+                </ul>
+            </div>
+            
+            <div class="row">
+       	        <div class="col-lg-6 col-md-6">
+   	                <a class="btn btn-lg btn-primary" th:href="@{/home}">Trang Chủ</a>
+                    <a class="btn btn-lg btn-success" th:href="@{/add}">Thêm Sinh Viên</a>
+                </div>
+            </div>
+        </div>
+	 	<div th:replace="fragments/footer :: footer"></div>
+	</body>
+</html>
