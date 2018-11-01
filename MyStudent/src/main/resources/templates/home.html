@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/layout :: common-header">
+	</head>
+	<body>
+		<div class="header-nightsky">
+			<nav th:replace="fragments/layout :: header"></nav>
+			 <div class="hero">
+	            <h1>Student Management</h1>
+	            <p>Managing Your College Has Never Been Easier! <br> News, extracurricular, and more... </p>
+	            <a class="btn btn-primary"  th:href="@{/student}">Manage now</a>
+	            <a class="btn btn-primary">Support us</a>
+	        </div>
+		<footer th:replace="fragments/layout :: footer"></footer>
+		</div>
+	</body>
+</html>
